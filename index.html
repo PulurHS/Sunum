@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
+<html lang="tr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>nietzsche-ve-uc-donusum</title>
+<title>Nietzsche ve üç Dönüşüm</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <style>
 /* VOICE: sakin, okumaya saygılı; deneme metinleri için bir okuma sahnesi
    IDEA: masaya yayılmış kâğıt sayfalar; kamera aralarında süzülerek dolaşır
@@ -14,7 +13,7 @@
    LAYOUT: tam ekran sahne, üstte ince araç çubuğu, altta küçük resim şeridi */
 :root{color-scheme:light dark;--bg:light-dark(#e8e2d6,#16140f);--ink:light-dark(#33291f,#efe8dc);--bar:light-dark(rgba(246,242,234,.92),rgba(30,27,22,.92));--line:light-dark(#cfc6b4,#3b352c);--sage:light-dark(#dfe9d8,#2c3a2a);--acc:light-dark(#5f7d52,#a9c79a);--cream:light-dark(#f6f0de,#2e2a21)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-*{box-sizing:border-box;min-width:0}
+*{box-sizing:border-box;min-width:0}[hidden]{display:none!important}
 html,body{height:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Source Sans 3",system-ui,sans-serif;overflow:hidden;display:flex;flex-direction:column}
 button,select,input{font:inherit;color:inherit}
@@ -92,9 +91,9 @@ body.fs .bar,body.fs .strip{position:absolute;left:0;right:0}body.fs .bar{top:0}
 </head>
 <body>
 <div class="bar" id="bar">
-  <h1 id="dtitle">nietzsche-ve-uc-donusum</h1>
+  <h1 id="dtitle">Nietzsche ve üç Dönüşüm</h1>
   <button class="btn main ed" id="add"><span data-i="add">Dosya ekle</span></button>
-  <input type="file" id="file" multiple hidden accept="image/*,.pdf,.pptx,.txt">
+  <input type="file" id="file" multiple="" hidden="" accept="image/*,.pdf,.pptx,.txt">
   <select id="layout" aria-label="Yerleşim">
     <option value="spiral" data-i="l1">Sarmal</option>
     <option value="circle" data-i="l2">Daire</option>
@@ -105,7 +104,7 @@ body.fs .bar,body.fs .strip{position:absolute;left:0;right:0}body.fs .bar{top:0}
   <span class="grow"></span>
   <button class="btn" id="ov" data-i="ov">Genel bakış</button>
   <button class="btn" id="play"><span data-i="play">Otomatik</span></button>
-  <select id="secs" aria-label="Saniye"><option>5</option><option selected>8</option><option>12</option><option>20</option><option>30</option></select>
+  <select id="secs" aria-label="Saniye"><option>5</option><option selected="">8</option><option>12</option><option>20</option><option>30</option></select>
   <button class="btn" id="fs" data-i="fs">Tam ekran</button>
   <button class="btn ed" id="clear" data-i="clr">Temizle</button>
   <button class="btn ed" id="save" data-i="save">Bilgisayara kaydet</button>
@@ -126,8 +125,8 @@ body.fs .bar,body.fs .strip{position:absolute;left:0;right:0}body.fs .bar{top:0}
   <div id="prog"></div>
   <div id="msg"></div>
   <div id="diag"></div>
-  <div id="dlg" hidden><form id="xf"><h3 data-i="xh">Bilgisayara kaydet</h3>
-    <label><span data-i="xtl">Sunum adı</span><input id="xt" required></label>
+  <div id="dlg" hidden=""><form id="xf"><h3 data-i="xh">Bilgisayara kaydet</h3>
+    <label><span data-i="xtl">Sunum adı</span><input id="xt" required=""></label>
     <label><span data-i="xal">Yazar</span><input id="xa"></label>
     <p id="xn"></p>
     <div class="xb"><button type="button" class="btn" id="xc" data-i="cancel">Vazgeç</button><button class="btn main" data-i="save">Bilgisayara kaydet</button></div></form></div>
@@ -196,8 +195,9 @@ https://github.com/nodeca/pako/blob/main/LICENSE
 const SRC='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
 let curFile=null;
 /* Sunum ayarları: yeni bir sunum için yalnızca burayı ve img/ klasörünü değiştirin */
-const DECK={title:"nietzsche-ve-uc-donusum",author:"H. SEVİNÇ",layout:"spiral",
-  images:["slayt01.jpg","slayt02.jpg","slayt03.jpg","slayt04.jpg","slayt05.jpg","slayt06.jpg","slayt07.jpg","slayt08.jpg","slayt09.jpg","slayt10.jpg","slayt11.jpg","slayt12.jpg","slayt13.jpg","slayt14.jpg","slayt15.jpg","slayt16.jpg","slayt17.jpg","slayt18.jpg","slayt19.jpg","slayt20.jpg","slayt21.jpg","slayt22.jpg"]};
+const MODE='viewer'; /* viewer: yalnızca izleme · studio: Zoom Sunum Atölyesi */
+const DECK={title:"Nietzsche ve üç Dönüşüm",author:"H. SEVİNÇ",layout:"spiral",
+  images:["slayt01.jpg","slayt02.jpg","slayt03.jpg","slayt04.jpg","slayt05.jpg","slayt06.jpg","slayt07.jpg","slayt08.jpg","slayt09.jpg","slayt10.jpg","slayt11.jpg","slayt12.jpg","slayt13.jpg","slayt14.jpg","slayt15.jpg","slayt16.jpg","slayt17.jpg","slayt18.jpg"]};
 const $=id=>document.getElementById(id);
 const stage=$('stage'),world=$('world'),strip=$('strip');
 const T={tr:{add:'Dosya ekle',l1:'Sarmal',l2:'Daire',l3:'Yol',l4:'Izgara',spd:'Geçiş',ov:'Genel bakış',play:'Otomatik',stop:'Durdur',fs:'Tam ekran',clr:'Temizle',edit:'Düzenle',orig:'Gömülü sunum',save:'Bilgisayara kaydet',xh:'Bilgisayara kaydet',xtl:'Sunum adı (klasör adı da olur)',xal:'Yazar',cancel:'Vazgeç',slides:'slayt',nothing:'Önce bir dosya ekleyin.',zipping:'ZIP hazırlanıyor…',saved:'ZIP indirildi: klasörü açıp GitHub’a sürükleyin.',nosave:'Kaydedilemedi',eh:'Sunumunuzu buraya bırakın',ep:'Görseller (JPG, PNG), PDF, PowerPoint (.pptx) veya metin (.txt). Dosyalar yalnızca tarayıcınızda işlenir.',drop:'Bırakın, sahneye ekleyeyim',help:'← → boşluk: gezin · O: genel bakış · F: tam ekran · tekerlek: yakınlaştır',load:'Yükleniyor',page:'sayfa',nolib:'Kütüphane yüklenemedi; internet bağlantısını kontrol edin.',bad:'Bu dosya türü desteklenmiyor',demo:'Örnek: “Zihinsel Vesayet” slaytlarınız. Kendi dosyanızı eklediğinizde yerini alır.',fsno:'Tam ekran bu görünümde engellendi.'},
@@ -520,7 +520,8 @@ async function exportZip(title,author){
     try{const r=await fetch('index.html',{cache:'no-store'});if(r.ok){const tx=await r.text();if(tx.includes('const DECK={'))base=tx}}catch(e){}
     let html=base.replace(/<script[^>]*\bsrc=[^>]*><\/script>/gi,'').replace(/const DECK=\{[\s\S]*?\};/,()=>deck)
       .replace(/<title>[^<]*<\/title>/,()=>'<title>'+title.replace(/</g,'&lt;')+'</title>');
-    if(!html.includes(deck))throw new Error('DECK');
+    html=html.replace(/const MODE='[a-z]+';/,"const MODE='viewer';");
+    if(!html.includes(deck)||!html.includes("const MODE='viewer';"))throw new Error('DECK');
     html=html.replace(/<h1 id="dtitle">[^<]*<\/h1>/,()=>'<h1 id="dtitle">'+title.replace(/</g,'&lt;')+'</h1>');
     log('ZIP içeriği / Inhalt: '+title+' · '+list.join(', '));
     dir.file('index.html',html);
@@ -630,16 +631,14 @@ async function loadEmbedded(){
 }
 log('PDF motoru / PDF-Modul: '+(window.pdfjsLib?'✓':'✗')+' · PPTX: '+(window.JSZip?'✓':'✗')+' · '+navigator.userAgent.replace(/^.*?\) /,''));
 if(DECK.accent)document.documentElement.style.setProperty('--acc',DECK.accent);
-const editMode=()=>location.hash==='#duzenle';
+const editMode=()=>MODE==='studio';
+if(MODE==='studio'){$('orig').hidden=true;$('edit').hidden=true}
 async function start(){
   stopPlay();document.body.classList.toggle('viewer',!editMode());document.body.classList.toggle('editing',editMode());$('edit').classList.toggle('on',editMode());wake();
   if(editMode()){const st=await restore();
     if(st&&st.length){log('Kayıtlı sunum / Gespeichert: '+st.length+' Datei(en)');await loadFiles(st,false);if(frames.length)return}}
   await loadEmbedded();
 }
-window.addEventListener('hashchange',start);
 start();
 }
-</script>
-</body>
-</html>
+</script></body></html>
