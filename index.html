@@ -2,7 +2,7 @@
 <html lang="tr"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nietzsche ve üç Dönüşüm</title>
+<title>Kendin_Olma_Özelliği_1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -91,7 +91,7 @@ body.fs .bar,body.fs .strip{position:absolute;left:0;right:0}body.fs .bar{top:0}
 </head>
 <body>
 <div class="bar" id="bar">
-  <h1 id="dtitle">Nietzsche ve üç Dönüşüm</h1>
+  <h1 id="dtitle">Kendin_Olma_Özelliği_1</h1>
   <button class="btn main ed" id="add"><span data-i="add">Dosya ekle</span></button>
   <input type="file" id="file" multiple="" hidden="" accept="image/*,.pdf,.pptx,.txt">
   <select id="layout" aria-label="Yerleşim">
@@ -196,8 +196,8 @@ const SRC='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
 let curFile=null;
 /* Sunum ayarları: yeni bir sunum için yalnızca burayı ve img/ klasörünü değiştirin */
 const MODE='viewer'; /* viewer: yalnızca izleme · studio: Zoom Sunum Atölyesi */
-const DECK={title:"Nietzsche ve üç Dönüşüm",author:"H. SEVİNÇ",layout:"spiral",
-  images:["slayt01.jpg","slayt02.jpg","slayt03.jpg","slayt04.jpg","slayt05.jpg","slayt06.jpg","slayt07.jpg","slayt08.jpg","slayt09.jpg","slayt10.jpg","slayt11.jpg","slayt12.jpg","slayt13.jpg","slayt14.jpg","slayt15.jpg","slayt16.jpg","slayt17.jpg","slayt18.jpg"]};
+const DECK={title:"Kendin_Olma_Özelliği_1",author:"H. SEVİNÇ",layout:"spiral",
+  images:["slayt01.jpg","slayt02.jpg","slayt03.jpg","slayt04.jpg","slayt05.jpg","slayt06.jpg","slayt07.jpg","slayt08.jpg","slayt09.jpg","slayt10.jpg","slayt11.jpg","slayt12.jpg","slayt13.jpg","slayt14.jpg","slayt15.jpg","slayt16.jpg"]};
 const $=id=>document.getElementById(id);
 const stage=$('stage'),world=$('world'),strip=$('strip');
 const T={tr:{add:'Dosya ekle',l1:'Sarmal',l2:'Daire',l3:'Yol',l4:'Izgara',spd:'Geçiş',ov:'Genel bakış',play:'Otomatik',stop:'Durdur',fs:'Tam ekran',clr:'Temizle',edit:'Düzenle',orig:'Gömülü sunum',save:'Bilgisayara kaydet',xh:'Bilgisayara kaydet',xtl:'Sunum adı (klasör adı da olur)',xal:'Yazar',cancel:'Vazgeç',slides:'slayt',nothing:'Önce bir dosya ekleyin.',zipping:'ZIP hazırlanıyor…',saved:'ZIP indirildi: klasörü açıp GitHub’a sürükleyin.',nosave:'Kaydedilemedi',eh:'Sunumunuzu buraya bırakın',ep:'Görseller (JPG, PNG), PDF, PowerPoint (.pptx) veya metin (.txt). Dosyalar yalnızca tarayıcınızda işlenir.',drop:'Bırakın, sahneye ekleyeyim',help:'← → boşluk: gezin · O: genel bakış · F: tam ekran · tekerlek: yakınlaştır',load:'Yükleniyor',page:'sayfa',nolib:'Kütüphane yüklenemedi; internet bağlantısını kontrol edin.',bad:'Bu dosya türü desteklenmiyor',demo:'Örnek: “Zihinsel Vesayet” slaytlarınız. Kendi dosyanızı eklediğinizde yerini alır.',fsno:'Tam ekran bu görünümde engellendi.'},
